@@ -1,0 +1,863 @@
+/* ==========================================================================
+   OmniFood Responsive Food Delivery Landing Page
+   Exact replica of the task specification
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. RESET & BASE VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  --primary-color: #e67e22;
+  --primary-dark: #cf6d17;
+  --text-main: #555555;
+  --text-dark: #333333;
+  --text-light: #888888;
+  --bg-light: #f4f4f4;
+  --bg-card: #ffffff;
+  --border-light: #e8e8e8;
+  --font-family: 'Lato', 'Arial', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: var(--font-family);
+  color: var(--text-main);
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   2. REUSABLE UTILITIES & LAYOUT
+   -------------------------------------------------------------------------- */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.section-divider {
+  width: 100px;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 20px auto 0 auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color var(--transition-speed), border var(--transition-speed), color var(--transition-speed);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-full {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-ghost {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECTION 1: HEADER & HERO
+   -------------------------------------------------------------------------- */
+.header-hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 50px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.fork-knife-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom var(--transition-speed);
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.hero-content-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-text-box {
+  max-width: 800px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.35;
+  margin-bottom: 40px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   4. SECTION 2: HOW IT WORKS
+   -------------------------------------------------------------------------- */
+.section-how-it-works {
+  padding: 80px 0;
+  background-color: #fcfcfc;
+}
+
+.how-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Phone Mockup */
+.phone-column {
+  display: flex;
+  justify-content: center;
+}
+
+.iphone-mockup {
+  width: 250px;
+  height: 480px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+  border: 4px solid #eaeaea;
+  padding: 35px 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iphone-speaker {
+  width: 45px;
+  height: 4px;
+  background-color: #d1d1d1;
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+}
+
+.iphone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background-color: #222;
+}
+
+.screen-bg-food {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 20, 15, 0.85), rgba(40, 25, 20, 0.7)), url('assets/hero-bg.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-circle {
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.iphone-home-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  position: absolute;
+  bottom: 4px;
+}
+
+/* Steps Column */
+.steps-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.step-number {
+  min-width: 54px;
+  height: 54px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.step-text {
+  font-size: 0.95rem;
+  padding-top: 10px;
+  color: #555;
+}
+
+/* App Download Badges */
+.app-badges {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-app {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #111;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.btn-app:hover {
+  background-color: #2b2b2b;
+  transform: translateY(-2px);
+}
+
+.btn-app i {
+  font-size: 1.8rem;
+}
+
+.btn-app-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.btn-app-text .sub {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #bbb;
+}
+
+.btn-app-text .main {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION 3: OUR CITIES (4 CARDS GRID)
+   -------------------------------------------------------------------------- */
+.section-cities {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.city-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-img-wrapper {
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.city-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.city-card:hover .city-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.city-name {
+  font-size: 1.15rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.city-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.city-features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.feature-icon {
+  width: 26px;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.city-twitter {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom var(--transition-speed);
+}
+
+.city-twitter:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+/* --------------------------------------------------------------------------
+   6. SECTION 4: TESTIMONIALS (DARK OVERLAY)
+   -------------------------------------------------------------------------- */
+.section-testimonials {
+  position: relative;
+  padding: 85px 0;
+  background-image: url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.78);
+}
+
+.relative-z {
+  position: relative;
+  z-index: 2;
+}
+
+.light-heading {
+  color: #fff;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.testimonial-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote-mark {
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--primary-color);
+  font-family: Georgia, serif;
+  margin-bottom: -15px;
+  opacity: 0.9;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #f0f0f0;
+  margin-bottom: 25px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.testimonial-author cite {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION 5: PRICING PLANS (3 CARDS)
+   -------------------------------------------------------------------------- */
+.section-pricing {
+  padding: 80px 0;
+  background-color: #f4f4f4;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card.featured-plan {
+  border-top: 3px solid var(--primary-color);
+}
+
+.plan-header {
+  padding: 25px 25px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fcfcfc;
+}
+
+.plan-name {
+  font-size: 1.15rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 2.4rem;
+  font-weight: 100;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: baseline;
+}
+
+.plan-price .currency {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-right: 4px;
+}
+
+.plan-price .frequency {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-left: 6px;
+}
+
+.plan-price-meal {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  min-height: 18px;
+}
+
+.plan-features {
+  padding: 25px;
+}
+
+.plan-features ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.icon-check {
+  color: var(--primary-color);
+  margin-right: 12px;
+  font-size: 0.9rem;
+}
+
+.icon-cross {
+  color: #bbb;
+  margin-right: 12px;
+  font-size: 0.9rem;
+}
+
+.plan-cta {
+  padding: 20px 25px 25px;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.plan-cta .btn {
+  width: 80%;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   8. SECTION 6: FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: #333333;
+  padding: 50px 0 40px;
+  color: #888888;
+  font-size: 0.8rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-nav li a {
+  color: #888;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.footer-nav li a:hover {
+  color: #ddd;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons li a {
+  color: #888;
+  font-size: 1.15rem;
+  transition: color var(--transition-speed), transform var(--transition-speed);
+  display: inline-block;
+}
+
+.social-icons li a:hover {
+  color: #ddd;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #777;
+}
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVENESS REQUIREMENTS (Desktop ≥1200, Tablet ≤834, Mobile ≤390)
+   -------------------------------------------------------------------------- */
+
+/* TABLET (≤834px) */
+@media (max-width: 834px) {
+  html {
+    font-size: 18px;
+  }
+
+  .nav-container {
+    padding: 25px 30px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .how-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .step-item {
+    justify-content: center;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .app-badges {
+    justify-content: center;
+  }
+
+  /* Grid becomes 2 columns */
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  /* Testimonials stack cleanly */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Pricing 2 columns or stacked */
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .pricing-card:last-child {
+    grid-column: span 2;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+}
+
+/* MOBILE (≤480px / 390px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    padding: 20px;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.98);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .iphone-mockup {
+    width: 210px;
+    height: 420px;
+  }
+
+  .step-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .cities-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

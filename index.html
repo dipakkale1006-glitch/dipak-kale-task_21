@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OmniFood - Responsive Food Delivery Landing Page Demo. Goodbye junk food, hello super healthy food." />
+  <title>OmniFood — Premium Food Delivery</title>
+
+  <!-- Google Fonts: Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Ionicons / FontAwesome Style Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== SECTION 1: HEADER + HERO ==================== -->
+  <header class="header-hero" id="home">
+    <nav class="nav-container">
+      <div class="logo-box">
+        <div class="logo-circle" aria-label="OmniFood Logo">
+          <svg class="fork-knife-icon" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Fork line -->
+            <line x1="30" y1="20" x2="30" y2="40" />
+            <line x1="40" y1="20" x2="40" y2="40" />
+            <line x1="20" y1="20" x2="20" y2="40" />
+            <path d="M 20 40 Q 30 52 40 40 L 30 52 L 30 82" />
+            <!-- Knife line (crossed) -->
+            <path d="M 80 20 C 65 24 60 44 68 56 L 75 82" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Hamburger button for mobile -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">FOOD DELIVERY</a></li>
+        <li><a href="#how-it-works">HOW IT WORKS</a></li>
+        <li><a href="#cities">OUR CITIES</a></li>
+        <li><a href="#pricing">SIGN-UP</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content-wrapper">
+      <div class="hero-text-box">
+        <h1 class="hero-title">
+          GOODBYE JUNK FOOD.<br />
+          HELLO SUPER HEALTHY FOOD.
+        </h1>
+        <div class="hero-cta-group">
+          <a href="#pricing" class="btn btn-full">I'm hungry</a>
+          <a href="#how-it-works" class="btn btn-ghost">Show me more</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SECTION 2: HOW IT WORKS ==================== -->
+  <section class="section-how-it-works" id="how-it-works">
+    <div class="container section-header">
+      <h2>HOW IT WORKS — SIMPLE AS 1, 2, 3</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="container how-layout">
+      <!-- Left side: Phone mockup -->
+      <div class="phone-column">
+        <div class="iphone-mockup">
+          <div class="iphone-speaker"></div>
+          <div class="iphone-screen">
+            <div class="screen-bg-food">
+              <div class="screen-logo-badge">
+                <div class="logo-circle small-circle">
+                  <svg class="fork-knife-icon" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round">
+                    <line x1="25" y1="20" x2="25" y2="40" />
+                    <line x1="38" y1="20" x2="38" y2="40" />
+                    <path d="M 18 40 Q 28 50 38 40 L 28 50 L 28 80" />
+                    <path d="M 75 20 C 62 25 58 45 66 56 L 72 80" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="iphone-home-button"></div>
+        </div>
+      </div>
+
+      <!-- Right side: 3 steps -->
+      <div class="steps-column">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <p class="step-text">Choose the subscription plan that best fits your needs and sign-up today.</p>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <p class="step-text">Order your delicious meal using our mobile app or website. Or even call us!</p>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <p class="step-text">Enjoy your meal after less than 20 minutes. See you the next time!</p>
+        </div>
+
+        <div class="app-badges">
+          <a href="#" class="btn-app" aria-label="Download on App Store">
+            <i class="fa-brands fa-apple"></i>
+            <div class="btn-app-text">
+              <span class="sub">Download on the</span>
+              <span class="main">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="btn-app" aria-label="Get it on Google Play">
+            <i class="fa-brands fa-google-play"></i>
+            <div class="btn-app-text">
+              <span class="sub">GET IT ON</span>
+              <span class="main">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: OUR CITIES ==================== -->
+  <section class="section-cities" id="cities">
+    <div class="container section-header">
+      <h2>WE'RE CURRENTLY IN THESE CITIES</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="container cities-grid">
+      <!-- Lisbon -->
+      <div class="city-card">
+        <div class="city-img-wrapper">
+          <img src="assets/lisbon.jpg" alt="Lisbon city" />
+        </div>
+        <h3 class="city-name">LISBON</h3>
+        <ul class="city-features">
+          <li>
+            <i class="fa-solid fa-user-group feature-icon"></i>
+            <span>1600+ happy eaters</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-star feature-icon"></i>
+            <span>60+ top chefs</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter feature-icon"></i>
+            <a href="#" class="city-twitter">@omnifood_lx</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- San Francisco -->
+      <div class="city-card">
+        <div class="city-img-wrapper">
+          <img src="assets/san-francisco.jpg" alt="San Francisco city" />
+        </div>
+        <h3 class="city-name">SAN FRANCISCO</h3>
+        <ul class="city-features">
+          <li>
+            <i class="fa-solid fa-user-group feature-icon"></i>
+            <span>3700+ happy eaters</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-star feature-icon"></i>
+            <span>160+ top chefs</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter feature-icon"></i>
+            <a href="#" class="city-twitter">@omnifood_sf</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Berlin -->
+      <div class="city-card">
+        <div class="city-img-wrapper">
+          <img src="assets/berlin.jpg" alt="Berlin city" />
+        </div>
+        <h3 class="city-name">BERLIN</h3>
+        <ul class="city-features">
+          <li>
+            <i class="fa-solid fa-user-group feature-icon"></i>
+            <span>1400+ happy eaters</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-star feature-icon"></i>
+            <span>50+ top chefs</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter feature-icon"></i>
+            <a href="#" class="city-twitter">@omnifood_berlin</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- London -->
+      <div class="city-card">
+        <div class="city-img-wrapper">
+          <img src="assets/london.jpg" alt="London city" />
+        </div>
+        <h3 class="city-name">LONDON</h3>
+        <ul class="city-features">
+          <li>
+            <i class="fa-solid fa-user-group feature-icon"></i>
+            <span>1200+ happy eaters</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-star feature-icon"></i>
+            <span>50+ top chefs</span>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter feature-icon"></i>
+            <a href="#" class="city-twitter">@omnifood_london</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: TESTIMONIALS ==================== -->
+  <section class="section-testimonials" id="testimonials">
+    <div class="overlay-dark"></div>
+    <div class="container relative-z">
+      <div class="section-header">
+        <h2 class="light-heading">OUR CUSTOMERS CAN'T LIVE WITHOUT US</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Quote 1 -->
+        <div class="testimonial-card">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="testimonial-text">
+            Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="assets/customer-1.jpg" alt="Alberto Duncan avatar" />
+            <cite>Alberto Duncan</cite>
+          </div>
+        </div>
+
+        <!-- Quote 2 -->
+        <div class="testimonial-card">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="testimonial-text">
+            Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omnifood. Me and my family are so in love!
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="assets/customer-2.jpg" alt="Joana Silva avatar" />
+            <cite>Joana Silva</cite>
+          </div>
+        </div>
+
+        <!-- Quote 3 -->
+        <div class="testimonial-card">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="testimonial-text">
+            I was looking for a quick and easy food delivery service in San Francisco. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="assets/customer-3.jpg" alt="Milton Chapman avatar" />
+            <cite>Milton Chapman</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: PRICING PLANS ==================== -->
+  <section class="section-pricing" id="pricing">
+    <div class="container section-header">
+      <h2>START EATING HEALTHY TODAY</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="container pricing-grid">
+      <!-- Plan 1: PREMIUM -->
+      <div class="pricing-card featured-plan">
+        <div class="plan-header">
+          <h3 class="plan-name">PREMIUM</h3>
+          <p class="plan-price"><span class="currency">$</span>399 <span class="frequency">/ month</span></p>
+          <p class="plan-price-meal">That's only 13.30$ per meal</p>
+        </div>
+        <div class="plan-features">
+          <ul>
+            <li><i class="fa-solid fa-check icon-check"></i> 1 meal every day</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Order 24/7</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Access to newest creations</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Free delivery</li>
+          </ul>
+        </div>
+        <div class="plan-cta">
+          <a href="#" class="btn btn-full">Sign up now</a>
+        </div>
+      </div>
+
+      <!-- Plan 2: PRO -->
+      <div class="pricing-card">
+        <div class="plan-header">
+          <h3 class="plan-name">PRO</h3>
+          <p class="plan-price"><span class="currency">$</span>149 <span class="frequency">/ month</span></p>
+          <p class="plan-price-meal">That's only 14.90$ per meal</p>
+        </div>
+        <div class="plan-features">
+          <ul>
+            <li><i class="fa-solid fa-check icon-check"></i> 1 meal 10 days/month</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Order 24/7</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Access to newest creations</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Free delivery</li>
+          </ul>
+        </div>
+        <div class="plan-cta">
+          <a href="#" class="btn btn-ghost">Sign up now</a>
+        </div>
+      </div>
+
+      <!-- Plan 3: STARTER -->
+      <div class="pricing-card">
+        <div class="plan-header">
+          <h3 class="plan-name">STARTER</h3>
+          <p class="plan-price"><span class="currency">$</span>19 <span class="frequency">/ meal</span></p>
+          <p class="plan-price-meal">&nbsp;</p>
+        </div>
+        <div class="plan-features">
+          <ul>
+            <li><i class="fa-solid fa-check icon-check"></i> 1 meal</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Order from 8 am to 12 pm</li>
+            <li><i class="fa-solid fa-xmark icon-cross"></i> Access to newest creations</li>
+            <li><i class="fa-solid fa-check icon-check"></i> Free delivery</li>
+          </ul>
+        </div>
+        <div class="plan-cta">
+          <a href="#" class="btn btn-ghost">Sign up now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <ul class="footer-nav">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <ul class="social-icons">
+          <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#" aria-label="Google Plus"><i class="fa-brands fa-google-plus-g"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Copyright &copy; 2026 by Omnifood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Smooth Scrolling & Mobile Navigation Toggle -->
+  <script>
+    const navToggle = document.getElementById('mobileNavToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = navToggle.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+    }
+
+    // Close menu when clicking link on mobile
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          const icon = navToggle.querySelector('i');
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
